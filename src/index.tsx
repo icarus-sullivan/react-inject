@@ -1,5 +1,5 @@
+import * as React from 'react';
 import { useEffect, useRef } from 'react';
-
 
 interface Props {
   id?: string,
@@ -20,10 +20,11 @@ const ReactInject = ({ id, src, ...props }: Props) => {
         }
       }
     };
-    xhttp.open('GET', src, true);
+    xhttp.open('GET', src, xhttp.withCredentials);
     xhttp.send();
-  }, []);
+  }, [src]);
 
+  // if we are given an id we don't need to create a div here
   return id ? null : (<div ref={ref} {...props} />);
 };
 

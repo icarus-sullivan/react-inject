@@ -7,7 +7,6 @@
     "lib/*"
   ],
   "scripts": {
-    "prepublishOnly": "yarn build",
     "prepare": "tsc -p ."
   },
   "repository": {
@@ -30,5 +29,8 @@
   "devDependencies": {
     "@types/react": "^16.8.10",
     "typescript": "^3.4.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3"
   }
 }
