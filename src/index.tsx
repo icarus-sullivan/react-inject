@@ -24,7 +24,7 @@ const ReactInject = ({ id, src, ...props }: Props) => {
     xhttp.send();
   }, [src]);
 
-  // if we are given an id we don't need to create a div here
+  // @ts-ignore if we are given an id we don't need to create a div here
   return id ? null : (<div ref={ref} {...props} />);
 };
 
