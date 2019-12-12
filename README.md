@@ -28,7 +28,7 @@ export default Circle;
 
 
 # Props 
-If an id is used, ReactInject will try to inject into the media into the query result. If not, a new div will be created and the content will be injected there.
+If an id is used, ReactInject will try to inject into the result of getElementById. If not, a new div will be created and the content will be injected there.
 
 ```typescript
 type ReactInjectProps {
