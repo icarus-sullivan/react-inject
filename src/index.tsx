@@ -20,7 +20,7 @@ const ReactInject = ({ id, src, ...props }: Props) => {
         }
       }
     };
-    xhttp.open('GET', src, xhttp.withCredentials);
+    xhttp.open('GET', src, true);
     xhttp.send();
   }, [src]);
 

@@ -1,6 +1,6 @@
 {
   "name": "@sullivan/react-inject",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Load and inject static assets with React",
   "main": "lib/index.js",
   "files": [
