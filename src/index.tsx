@@ -4,10 +4,11 @@ import { useEffect, useRef } from 'react';
 interface Props {
   id?: string,
   src: string,
+  tag?: string,
   [key: string]: any
 }
 
-const ReactInject = ({ id, src, ...props }: Props) => {
+const ReactInject = ({ id, src, tag = 'div', children = [], ...props }: Props) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -24,8 +25,11 @@ const ReactInject = ({ id, src, ...props }: Props) => {
     xhttp.send();
   }, [src]);
 
-  // @ts-ignore if we are given an id we don't need to create a div here
-  return id ? null : (<div ref={ref} {...props} />);
+  if (id) {
+    return null;
+  }
+
+  return React.createElement(tag, { ...props, ref }, children);
 };
 
 export default ReactInject;

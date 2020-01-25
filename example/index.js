@@ -6,7 +6,7 @@ import ReactInject from '@sullivan/react-inject';
 const Render = () => (
   <>
     <div id="replace-me" />
-    <ReactInject src="circle.svg" />
+    <ReactInject src="circle.svg" tag="p"/>
     <ReactInject id="replace-me" src="text.md" />
   </>
 );
